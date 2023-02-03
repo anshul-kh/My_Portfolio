@@ -1,474 +1,420 @@
-*{
-    margin: 0;
-    padding: 0;
-      box-sizing: border-box;
-  }
-  
-  html,body{
-    min-width: 100%;
-    height: 100%;
-    overflow-x: hidden;
-    font-size: 16px;
-    font-family: 'Montserrat', sans-serif;
-    background-color: #000;
-    scroll-behavior: smooth;
-    animation: boot 1.6s ease-out;
-    
-  }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
 
-   /* ====================
+html,
+body {
+  min-width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+  background-color: #000;
+  scroll-behavior: smooth;
+  animation: boot 1.6s ease-out;
+}
+
+/* ====================
     Navigation Section
   =======================*/
-  
-  header .navigation {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    position: fixed;
-    min-height: 10vh;
-    min-width: 100%;
-    z-index: 10;
-    background: #00000000;
-    animation: boot 1.5s ease-out ;
-    
-  }
-  
-  header .navigation .logo{
-    /* margin-left: 10px; */
-    animation: logo 2.7s ease-in-out infinite ;
-    font-family: 'Anurati';
-    background-color: #000; 
-  }
-  
-  header .navigation .logo h1{
-    color: #ffffff;
-    font-size: 40px;
-    line-height: 38px;
-    margin-left: 10px;
-    
-  }
-  
-  header .navigation .menu-list {
-    list-style: none;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 45%;
-    margin: auto 20px auto 0;
-  }
-  
-  header .navigation .humbarger {
-    margin-right: 20px;
-    display: none;
-   }
-   
-  header .navigation .humbarger .bar{
-    width: 30px;
-    height: 2px;
-    margin: 7px;
-    background: #b1d4e0;
-   }
-  
-  header .navigation .menu-list li a {
-    color: #ffffff;
-    font-size: 1.25rem;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    cursor: pointer;
-    font-weight: 500;
-    font-family: 'Marske';
-    transition: color 1s ease, border 1s ease;
-    text-decoration: none;
-  }
+
+header .navigation {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  position: fixed;
+  min-height: 10vh;
+  min-width: 100%;
+  z-index: 10;
+  background: #00000000;
+  animation: boot 1.5s ease-out;
+}
+
+header .navigation .logo {
+  animation: logo 2.7s ease-in-out infinite;
+  font-family: "Anurati";
+  background-color: rgba(0, 0, 0, 0);
+}
+
+header .navigation .logo h1 {
+  color: #ffffff;
+  font-size: 40px;
+  line-height: 38px;
+  margin-left: 10px;
+}
+
+header .navigation .menu-list {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 45%;
+  margin: auto 20px auto 0;
+}
+
+header .navigation .humbarger {
+  margin-right: 20px;
+  display: none;
+}
+
+header .navigation .humbarger .bar {
+  width: 30px;
+  height: 2px;
+  margin: 7px;
+  background: #b1d4e0;
+}
+
+header .navigation .menu-list li a {
+  color: #ffffff;
+  font-size: 1.25rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: 500;
+  font-family: "Marske";
+  transition: color 1s ease, border 1s ease;
+  text-decoration: none;
+}
+
+header .navigation .menu-list li a:hover {
+  background: linear-gradient(to right, #f32170, #ff6b08, #cf23cf, #eedd44);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  transition: all 0.5s ease-out;
+}
 
 
-  header .navigation .menu-list li a:hover{
-    background: linear-gradient(
-      to right, #f32170, #ff6b08,
-       #cf23cf, #eedd44);
-      -webkit-text-fill-color: transparent;
-      -webkit-background-clip: text;
-      transition: all 0.5s ease-out;
-  }
-  
-  /* ====================
+/* ====================
     Intro Section
   =======================*/
 
-
-  .intro-section {
-    height: 90vh;
-    position: flex;
-    align-items: flex-start; 
-    justify-content: left;
-    background-color: #000;
-    animation: boot 1.5s ease-out ;
-    display: flex;
-    flex-direction: row;
-    
-    
-
-  }
-
-  
-  
-  .intro-section .intro-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: right;
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: left;
-    left: 20vw;
-    top: 30%; 
-
-    
-  }
-
-
-  .intro-content{
-    
-    z-index: 20;
-
-    
-  }
-  
-  .intro-section .intro-content h1 {
-    color: #ffffff;
-    font-size: 3rem;
-    letter-spacing:1px;
-    text-transform: uppercase;
-    font-weight: 400;
-    text-align: left;
-    margin-top: 20px;
-    font-family: 'Anurati';
-  }
-  
-  .intro-section .intro-content h6{
-    margin-top: 5px;
-    color: #ffffff;
-    font-size: 1rem;
-    font-family: 'Celari';
-    font-weight: 200;
-  }
-  
-  .intro-section .intro-content p {
-    margin-top: 30px;
-    color: #ffffff;
-    font-family: 'Celari';
-    width: 35%;
-    font-size: 1.2rem;
-  }
-  
-  .intro-content .tagline {
-    margin-top:0px;
-  }
-
-  .intro-section .intro-anim{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 10vh;
-    margin-right: 10vw;
-    z-index: 6;
-    background-color: rgba(0, 0, 0, 0);
-  }
-
-  .socil-links a{
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    border: 2px solid #fff;
-    font-size: 18px;
-    color: #fff;
-    margin-right: 15px;
-    margin-bottom: 25px;
-    transition: ease .3s;
-    margin-top: 30px;
-
-   
-    
+.intro-section {
+  height: 90vh;
+  position: flex;
+  align-items: flex-start;
+  justify-content: left;
+  background-color: #000;
+  animation: boot 1.5s ease-out;
+  display: flex;
+  flex-direction: row;
 }
 
-.socil-links a:hover{
-  box-shadow:
-      
-      0 0 20px rgb(247, 247, 247),           
-      -10px 0 80px #f0f,       
-      10px 0 80px #0ff;
-  
+.intro-section .intro-content {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: right; */
+  position: relative;
+  width: 100%;
+  height: 100%;
+  left: 20vw;
+  top: 30%;
+  z-index: 6;
 }
-  
-
-  
-  .intro-section .intro-content .changing {
-      position: absolute;
-      overflow: hidden;
-    width: 100%;
-    left:0;
-    bottom:0;
-    height:0;
-    opacity:0;
-    color: #ffffff;
-    text-transform: uppercase;
-    word-spacing: 5px;
-      text-align: center;
-      font-size: 2.5rem;
-  }
 
 
 
- 
-  /* ====================
+.intro-section .intro-content h1 {
+  color: #ffffff;
+  font-size: 3rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 400;
+  text-align: left;
+  margin-top: 20px;
+  font-family: "Anurati";
+}
+
+.intro-section .intro-content h6 {
+  margin-top: 5px;
+  color: #ffffff;
+  font-size: 1rem;
+  font-family: "Celari";
+  font-weight: 200;
+}
+
+.intro-section .intro-content p {
+  margin-top: 30px;
+  color: #ffffff;
+  font-family: "Celari";
+  width: 35%;
+  font-size: 1.2rem;
+}
+
+.intro-content .tagline {
+  margin-top: 0px;
+}
+
+.intro-section .intro-anim {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10vh;
+  margin-right: 10vw;
+  z-index: 6;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.socil-links a {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #fff;
+  font-size: 18px;
+  color: #fff;
+  margin-right: 15px;
+  margin-bottom: 25px;
+  transition: ease 0.3s;
+  margin-top: 30px;
+}
+
+.socil-links a:hover {
+  box-shadow: 0 0 20px rgb(247, 247, 247), -10px 0 80px #f0f, 10px 0 80px #0ff;
+}
+
+
+
+/* ====================
       About Section
   =======================*/
 
-  .about-me{
-    width: 100%;
-    height: auto;
-    min-height: 10vh;
-    z-index: 40;
-    margin-top: 40px;
-    
-  }
-
-  .about-me .about, .skill-board{
-    position:relative;
-    width: 100%;
-    height: 50vh;
-    transform: skewY(-5deg);
-    background: linear-gradient(109.6deg, rgb(23, 28, 36) 11.2%, rgb(10, 25, 41) 51.2%, rgb(0, 0, 0) 98.6%); 
-    margin-top: 9vh;
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    justify-content: center;
-    box-shadow:
-     /* inner right cyan broad */
-    0 0 15px rgba(255, 255, 255, 0.719),            /* outer white */
-    -9px 0 15px rgba(255, 0, 255, 0.76),        /* outer left magenta */
-    9px 0 15px rgba(0, 255, 255, 0.758);
-    
-
+.about-me {
+  width: 100%;
+  height: auto;
+  min-height: 10vh;
+  z-index: 40;
+  margin-top: 40px;
 }
 
-  
-  .about-me .about h1{
-    transform: skewY(5deg);
-    margin-left: 44.8%;
-    color: #ffffff;
-    font-size: 3rem;
-    letter-spacing:1px;
-    text-transform: uppercase;
-    font-weight: 400;
-    font-family: 'Anurati';
-    background: linear-gradient(
-      to right, #f32170, #ff6b08,
-       #cf23cf, #eedd44);
--webkit-text-fill-color: transparent;
--webkit-background-clip: text;
-  }
+.about-me .about,
+.skill-board {
+  position: relative;
+  width: 100%;
+  height: 50vh;
+  transform: skewY(-5deg);
+  background: linear-gradient(109.6deg,
+      rgb(23, 28, 36) 11.2%,
+      rgb(10, 25, 41) 51.2%,
+      rgb(0, 0, 0) 98.6%);
+  margin-top: 9vh;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  box-shadow:
+    0 0 15px rgba(255, 255, 255, 0.719),
+    -9px 0 15px rgba(255, 0, 255, 0.76),
+    9px 0 15px rgba(0, 255, 255, 0.758);
+}
 
-  .about-me .about p{
-    transform: skewY(5deg);
-    text-align: justify;
-    width: 50%;
-    margin-left: 29%;
-    color: #ffffff;
-    font-family: 'Celari';
-    font-size: 1.2rem;
-    
-  }
+.about-me .about h1 {
+  transform: skewY(5deg);
+  margin-left: 44.8%;
+  color: #ffffff;
+  font-size: 3rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-family: "Anurati";
+  background: linear-gradient(to right, #f32170, #ff6b08, #cf23cf, #eedd44);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
 
+.about-me .about p {
+  transform: skewY(5deg);
+  text-align: justify;
+  width: 50%;
+  margin-left: 29%;
+  color: #ffffff;
+  font-family: "Celari";
+  font-size: 1.2rem;
+}
 
-  /* ====================
+/* ====================
     Tags Section
   =======================*/
 
+.tags {
+  color: #fff;
+  background-color: rgba(0, 255, 255, 0);
+  width: 100%;
+  height: 20vh;
+  margin-top: 10vh;
+  display: flex;
+  flex-direction: column;
 
-  .tags{
-    color: #fff;
-    background-color: rgba(0, 255, 255, 0);
-    width: 100%;
-    height: 20vh;
-    margin-top: 10vh;
-    display: flex;
-    flex-direction: column;
-  }
+}
 
-  .tag-item1,.tag-item2{
-    display: flex;
-    flex-direction: row;
-    width: 5vw;
-    width: 100%;
-    justify-content: space-between;
-    align-content: center;
-    padding-left: 5rem;
-    padding-right: 5rem;
-    padding-top: 2rem;
-    margin-left: -30px;
-    background: linear-gradient(
-            to right, #f32170, #ff6b08,
-             #cf23cf, #eedd44);
-      -webkit-text-fill-color: transparent;
-      -webkit-background-clip: text;
-  }
+.tag-item1,
+.tag-item2 {
+  display: flex;
+  flex-direction: row;
 
-  .tag-item2{
-    margin-left: 30px;
-  }
+  width: 100%;
+  justify-content: space-between;
+  align-content: center;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  padding-top: 2rem;
+  margin-left: -30px;
+  background: linear-gradient(to right, #f32170, #ff6b08, #cf23cf, #eedd44);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
 
-  .tag-item1 p,.tag-item2 p{
-    
-    font-size: 2rem;
-    letter-spacing:1px;
-    text-transform: uppercase;
-    font-weight: 400;
-    font-family: 'Celari';
-  }
+}
 
+.tag-item2 {
+  margin-left: 30px;
+}
 
+.tag-item1 p,
+.tag-item2 p {
+  font-size: 2rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-family: "Celari";
+}
 
-  /* ====================
+/* ====================
     Skills Section
   =======================*/
 
-
-.skill-board{
+.skill-board {
   margin-top: 15vh;
 }
 
-  .skill-board .skill-head {
-    margin-left: 50%;
-    color: #fff;
-    /* transform: scaleY(5deg); */
-  }
+.skill-board .skill-head {
+  margin-left: 50%;
+  color: #fff;
 
-  .skill-board .skill-head h1{
-    font-size: 3rem;
-    letter-spacing:1px;
-    font-weight: 400;
-    font-family: 'Celari';
-    transform: skewY(5deg);
-  }
-  .skill-container .skill-box h2{
-    letter-spacing:1px;
-    font-weight: 200;
-    font-family: 'Celari';
-    background: linear-gradient(
-            to right, #f32170, #ff6b08,
-             #cf23cf, #eedd44);
-      -webkit-text-fill-color: transparent;
-      -webkit-background-clip: text;
-  }
-
-
-  .skill-board .skill-container{
-    display: flex;
-    flex-direction: row;
-    color:white;
-    transform: skewY(5deg);
-    
-  }
-
-  .skill-box{
-    width: 250px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin: 10px;
-    
 }
-.skill-box .img{
-    width: 90px;
-    height: 90px;
-    background-color: rgba(245, 222, 179, 0);
-    /* background-color: #3498db; */
-    box-shadow: var(--box-color);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    margin-bottom: 20px;
-    cursor: pointer;
-    box-shadow:
-     /* inner right cyan broad */
-    0 0 7px rgba(255, 255, 255, 0.545),            /* outer white */
-    -5px 0 7px rgba(241, 236, 241, 0.577),        /* outer left magenta */
+
+.skill-board .skill-head h1 {
+  position: relative;
+  font-size: 3rem;
+  letter-spacing: 1px;
+  font-weight: 400;
+  font-family: "Celari";
+  transform: skewY(5deg);
+}
+
+.skill-container .skill-box h2 {
+  letter-spacing: 1px;
+  font-weight: 200;
+  font-family: "Celari";
+  background: linear-gradient(to right, #f32170, #ff6b08, #cf23cf, #eedd44);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.skill-board .skill-container {
+  display: flex;
+  flex-direction: row;
+  color: white;
+  transform: skewY(5deg);
+}
+
+.skill-box {
+  width: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 10px;
+}
+
+.skill-box .img {
+  width: 90px;
+  height: 90px;
+  background-color: rgba(245, 222, 179, 0);
+  box-shadow: var(--box-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  cursor: pointer;
+  box-shadow:
+    0 0 7px rgba(255, 255, 255, 0.545),
+    -5px 0 7px rgba(241, 236, 241, 0.577),
     5px 0 7px rgba(239, 244, 244, 0.636);
-
 }
-.skill-box img{
-    width: 50px;
-    height: 50px;    
-    transition: all 0.4s ease-out;
-}
-.skill-box img:hover{
-    width: 55px;
-    height: 55px;
-   
 
+.skill-box img {
+  width: 50px;
+  height: 50px;
+  transition: all 0.4s ease-out;
+}
+
+.skill-box img:hover {
+  width: 55px;
+  height: 55px;
 }
 
 /* ====================
     Contact Section
   =======================*/
 
-
-#contact{
+#contact {
   padding: 40px 18%;
   color: #fff;
   margin-top: 10vh;
 }
-.contact-form h1{
+
+.contact-form h1 {
   font-size: 45px;
   font-weight: 600;
   text-align: center;
-  font-family: 'Celari';
-  background: linear-gradient(
-            to right, #f32170, #ff6b08,
-             #cf23cf, #eedd44);
-      -webkit-text-fill-color: transparent;
-      -webkit-background-clip: text;
+  font-family: "Celari";
+  background: linear-gradient(to right, #f32170, #ff6b08, #cf23cf, #eedd44);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
 }
 
-.contact-form p{
+.contact-form p {
   font-size: 15px;
   text-align: center;
-  font-family: 'Celari';
+  font-family: "Celari";
   margin-top: 20px;
 }
-.contact-form{
+
+.contact-form {
   max-width: 1320px;
   margin: 0 auto;
   padding: 5%;
 }
-form{
+
+form {
   max-width: 500px;
   margin: 0 auto;
   padding: 20px 0;
-  
 }
-input,textarea,label{
+
+input,
+textarea,
+label {
   display: block;
   margin: 0 auto;
   width: 100%;
-  
 }
-input,textarea{
+
+input,
+textarea {
   background-color: rgba(255, 255, 255, 0.093);
   border-radius: 15px;
   outline: none;
-  margin:10px 0;
+  margin: 10px 0;
   color: white;
 }
 
-form button{
+form button {
   padding: 8px 40px;
   border-radius: 30px;
   background-color: white;
@@ -478,185 +424,302 @@ form button{
   cursor: pointer;
   font-size: 18px;
 }
-form button:hover{
+
+form button:hover {
   color: #fff;
   background-color: transparent;
 }
-
-
 
 /* ====================
     Footer Section
   =======================*/
 
-
-#footer{
+#footer {
   padding: 0 0;
 }
 
-footer{
+footer {
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: transparent;
   height: auto;
   border-radius: 5px;
-  /* border: 2px solid white; */
-  /* padding-top: 20px; */
   color: black;
 }
-.footer-bottom{
+
+.footer-bottom {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: 'Celari';
+  font-family: "Celari";
   color: white;
 }
 
-  /* ====================
+/* ====================
     Responsive Section
   =======================*/
-  
-  /* Tablet desktop :768px. */
-  
-  @media only screen and (min-width: 768px) and (max-width: 991px) {
-    header .navigation{
-      justify-content: space-between;
-    }
 
-    header .navigation .menu-list {
-      width: 60%;
-    }
-  
-    header .navigation .menu-list li a{
-      font-size: 1rem;
-    }
-  
-  }
-  
-  /* Large Mobile :480px. */
-  
-  @media only screen and (max-width: 767px) {
+/* Tablet desktop :768px. */
 
-    header .navigation{
-      justify-content: space-between;
-    }
-    
-  
-    header .navigation .menu-list {
-      position: absolute;
-      top: 12vh;
-      min-width: 100%;
-      background: rgba(15, 20, 35, 0.99);
-      text-align: center;
-      display: none;
-    }
-  
-    header .navigation .menu-list li {
-      display: block;
-    }
-  
-    header .navigation .menu-list li a {
-      display: block;
-      padding: 20px;
-      transition: color 1s ease, padding 1s ease, background-color 1s ease;
-  
-    }
-  
-    header .navigation .menu-list li a:hover{
-      color: #b1d4e0;
-      padding-left: 30px;
-      background: rgba(177, 212, 224, 0.2);
-    }
-  
-  
-    header .navigation .humbarger{
-      display: block;
-    }
-  
-    .intro-section .intro-content h1 {
-      font-size: 2.8rem;
-    }
-  
-    .intro-section .intro-content h6 {
-      font-size: 1.4rem;
-    }
-  
-    .intro-section .intro-content .changing {
-      font-size: 1.5rem;
-    }
-  
-    .intro-section .intro-content .header-btn a{
-      font-size: 1.25rem;
-    }
-  
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  header .navigation {
+    justify-content: space-between;
+
   }
-  
-  
-  /* small mobile :320px. */
-  
-  @media only screen and (max-width: 479px) {
-  
-    .intro-inner .intro-content h1 {
-      font-size: 2rem;
-      letter-spacing: 1px;
-    }
-  
-    .intro-inner .intro-content p {
-      margin-top: 10px;
-    }
-  
+
+  header .navigation .menu-list {
+    width: 60%;
+  }
+
+  header .navigation .menu-list li a {
+    font-size: 1rem;
+  }
+}
+
+/* Large Mobile :480px. */
+
+@media only screen and (max-width: 767px) {
+  header .navigation {
+    justify-content: space-between;
+    top: 0;
+  }
+
+  header .navigation .menu-list {
+    position: absolute;
+    top: 10vh;
+    min-width: 100%;
+    background: rgba(4, 8, 19, 0.99);
+    text-align: center;
+    display: none;
+    border-radius: 1rem;
+  }
+
+  header .navigation .menu-list li {
+    display: block;
+  }
+
+  header .navigation .menu-list li a {
+    display: block;
+    padding: 20px;
+    transition: color 1s ease, padding 1s ease, background-color 1s ease;
+  }
+
+  header .navigation .menu-list li a:hover {
+    color: #b1d4e0;
+    padding-left: 30px;
+    background: linear-gradient(to right, #f32170, #ff6b08, #cf23cf, #eedd44);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    transition: all 0.5s ease-out;
+  }
+
+  header .navigation .humbarger {
+    display: block;
+  }
+
+  .intro-section {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .intro-section .intro-content {
+    left: 10vw;
+    top: 15%;
+
   }
 
 
-   /* ====================
+
+  .intro-section .intro-content h1 {
+    font-size: 1.8rem;
+    width: 100%;
+
+
+  }
+
+  .intro-section .intro-content h6 {
+    font-size: 1.4rem;
+  }
+
+  .intro-section .intro-content p {
+    margin-top: 30px;
+    color: #ffffff;
+    font-family: "Celari";
+    width: 80%;
+    font-size: 1.2rem;
+  }
+
+
+  .intro-section .intro-content .changing {
+    font-size: 1.5rem;
+  }
+
+  .intro-section .intro-content .header-btn a {
+    font-size: 1.25rem;
+  }
+
+
+  .intro-section .intro-anim {
+
+    margin-top: 10vh;
+    z-index: 6;
+    background-color: rgba(0, 0, 0, 0);
+    width: 100%;
+    padding: 3rem;
+    height: 300px;
+
+  }
+
+  .socil-links a {
+    box-shadow: 0 0 20px rgb(247, 247, 247), -10px 0 80px #f0f, 10px 0 80px #0ff;
+  }
+
+  .about-me .about {
+    height: 45vh;
+  }
+
+  .about-me .about h1 {
+    margin-left: 19%;
+    font-size: 2.5rem;
+  }
+
+  .about-me .about p {
+    width: 100%;
+    margin-left: 0%;
+    padding: 10px;
+    margin-top: 5px;
+    font-size: 0.9rem;
+  }
+
+  .tags {
+    margin-top: 1vh;
+    height: 5vh;
+  }
+
+  .tag-item1,
+  .tag-item2 {
+    transform: scale(1.3);
+
+  }
+
+  .tag-item2 {
+    margin-left: 20px;
+  }
+
+  .tag-item1 p,
+  .tag-item2 p {
+    font-size: 10px;
+
+  }
+
+
+  .skill-board {
+    margin-top: 13vh;
+    height: 55vh;
+
+  }
+
+  .skill-board .skill-head {
+    margin-left: 30%;
+    margin-top: 3rem;
+  }
+
+  .skill-board .skill-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+    margin-left: -10px;
+    scale: 0.86;
+    margin-top: -19px;
+
+
+  }
+
+  .skill-box {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+
+
+
+
+
+  }
+
+  .skill-container .skill-box h2 {
+    font-size: 1rem;
+  }
+
+  .skill-box .img {
+    width: 75px;
+    height: 75px;
+    display: grid;
+
+  }
+
+}
+
+
+/* small mobile :320px. */
+
+@media only screen and (max-width: 479px) {
+  .intro-inner .intro-content h1 {
+    font-size: 2rem;
+    letter-spacing: 1px;
+  }
+
+  .intro-inner .intro-content p {
+    margin-top: 10px;
+  }
+}
+
+/* ====================
     Animation Section
   =======================*/
 
 @keyframes logo {
-    0%{
-        transform: scale(0.9) translateY(0px);
-        
-    }
+  0% {
+    transform: scale(0.9) translateY(0px);
+  }
 
-    50%{
-        transform: scale(1) translateY(-5px);
-       
-    }
+  50% {
+    transform: scale(1) translateY(-5px);
+  }
 
-    
-    100%{
-        transform:scale(0.9) translateY(0px);
-        
-    }
+  100% {
+    transform: scale(0.9) translateY(0px);
+  }
 }
 
 @keyframes boot {
-
-  from{
+  from {
     opacity: 0;
   }
-  to{
+
+  to {
     opacity: 1;
   }
-  
 }
 
- 
-
-  /* ====================
+/* ====================
     Font Section
   =======================*/
 
-  @font-face {
-    font-family: Anurati;
-    src: url(../assets/fonts/Anurati-Regular.otf);
-  }
-  @font-face {
-    font-family: Celari;
-    src: url(../assets/fonts/FontsFree-Net-celari-titling-cond-bold.ttf);
-  }
-  @font-face {
-    font-family: Marske;
-    src: url(../assets/fonts/Marske.ttf);
-  }
+@font-face {
+  font-family: Anurati;
+  src: url(../assets/fonts/Anurati-Regular.otf);
+}
+
+@font-face {
+  font-family: Celari;
+  src: url(../assets/fonts/FontsFree-Net-celari-titling-cond-bold.ttf);
+}
+
+@font-face {
+  font-family: Marske;
+  src: url(../assets/fonts/Marske.ttf);
+}
