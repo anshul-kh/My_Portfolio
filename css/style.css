@@ -5,16 +5,15 @@
   text-decoration: none;
 }
 
+
 html,
 body {
   min-width: 100%;
   height: 100%;
-  overflow-x: hidden;
   font-size: 16px;
   font-family: "Montserrat", sans-serif;
   background-color: #000;
   scroll-behavior: smooth;
-  animation: boot 1.6s ease-out;
 }
 
 /* ====================
@@ -27,10 +26,13 @@ header .navigation {
   align-items: center;
   position: fixed;
   min-height: 10vh;
-  min-width: 100%;
+  width: 100%;
   z-index: 10;
-  background: #00000000;
-  animation: boot 1.5s ease-out;
+  top: 1rem;
+  background: #100c1efc;
+  border-radius: 20px;
+  animation: nav 2s ease-out;
+  
 }
 
 header .navigation .logo {
@@ -93,9 +95,10 @@ header .navigation .menu-list li a:hover {
 
 .intro-section {
   height: 90vh;
-  position: flex;
-  align-items: flex-start;
-  justify-content: left;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #000;
   animation: boot 1.5s ease-out;
   display: flex;
@@ -105,12 +108,12 @@ header .navigation .menu-list li a:hover {
 .intro-section .intro-content {
   display: flex;
   flex-direction: column;
-  /* justify-content: right; */
+  justify-content: right;
   position: relative;
   width: 100%;
-  height: 100%;
-  left: 20vw;
-  top: 30%;
+  /* height: 100%; */
+  left: 10vw;
+  top: 8%;
   z-index: 6;
 }
 
@@ -141,6 +144,7 @@ header .navigation .menu-list li a:hover {
   font-family: "Celari";
   width: 35%;
   font-size: 1.2rem;
+  overflow-wrap: break-word;
 }
 
 .intro-content .tagline {
@@ -151,10 +155,14 @@ header .navigation .menu-list li a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 10vh;
-  margin-right: 10vw;
+  margin-top: 11vh;
   z-index: 2;
   background-color: rgba(0, 0, 0, 0);
+}
+.intro-anim .anim1{
+  width: 500px;
+  height: 500px;
+  margin-right: 8rem;
 }
 
 .socil-links a {
@@ -195,7 +203,7 @@ header .navigation .menu-list li a:hover {
 .about-me .about,
 .skill-board {
   position: relative;
-  width: 100%;
+  min-width: 100%;
   height: 50vh;
   transform: skewY(-5deg);
   background: linear-gradient(109.6deg,
@@ -207,6 +215,7 @@ header .navigation .menu-list li a:hover {
   flex-direction: column;
   align-content: center;
   justify-content: center;
+  overflow-x: hidden;
   box-shadow:
     0 0 15px rgba(255, 255, 255, 0.719),
     -9px 0 15px rgba(255, 0, 255, 0.76),
@@ -237,6 +246,9 @@ header .navigation .menu-list li a:hover {
   font-size: 1.2rem;
 }
 
+
+
+
 /* ====================
     Tags Section
   =======================*/
@@ -256,22 +268,23 @@ header .navigation .menu-list li a:hover {
 .tag-item2 {
   display: flex;
   flex-direction: row;
-
-  width: 100%;
-  justify-content: space-between;
+  justify-content: space-around;
   align-content: center;
-  padding-left: 5rem;
-  padding-right: 5rem;
-  padding-top: 2rem;
-  margin-left: -30px;
+  gap: 1rem;
   background: linear-gradient(to right, #f32170, #ff6b08, #cf23cf, #eedd44);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
 
 }
 
-.tag-item2 {
-  margin-left: 30px;
+.tag-item1 p{
+  margin-top: 2rem;
+  margin-right: .8rem;
+}
+
+.tag-item2 p {
+  margin-top: 2rem;
+  margin-left: .8rem;
 }
 
 .tag-item1 p,
@@ -481,9 +494,15 @@ footer {
 /* Large Mobile :480px. */
 
 @media only screen and (max-width: 767px) {
+
+  body{
+    overflow-x: hidden;
+  }
+
   header .navigation {
     justify-content: space-between;
-    top: 0;
+    top: 5px;
+    min-height: 7vh;
   }
 
   header .navigation .menu-list {
@@ -495,6 +514,9 @@ footer {
     display: none;
     border-radius: 1rem;
   }
+  header .navigation .logo h1{
+    font-size: 25px ;
+  }
 
   header .navigation .menu-list li {
     display: block;
@@ -505,15 +527,6 @@ footer {
     padding: 20px;
     transition: color 1s ease, padding 1s ease, background-color 1s ease;
   }
-/* 
-  header .navigation .menu-list li a:hover {
-    color: #b1d4e0;
-    padding-left: 30px;
-    background: linear-gradient(to right, #f32170, #ff6b08, #cf23cf, #eedd44);
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
-    transition: all 0.5s ease-out;
-  } */
 
   header .navigation .humbarger {
     display: block;
@@ -522,21 +535,17 @@ footer {
   .intro-section {
     display: flex;
     flex-direction: column;
+    overflow-x: hidden;
+    height: 100vh;
   }
 
-  .intro-section .intro-content {
-    left: 10vw;
-    top: 15%;
 
-  }
 
 
 
   .intro-section .intro-content h1 {
     font-size: 1.8rem;
     width: 100%;
-
-
   }
 
   .intro-section .intro-content h6 {
@@ -552,17 +561,12 @@ footer {
   }
 
 
-
-  .intro-section .intro-anim {
-
-    margin-top: 11vh;
-    z-index: 6;
-    background-color: rgba(0, 0, 0, 0);
-    width: 100%;
-    padding: 3rem;
-    height: 300px;
-    z-index: 1;
-
+  .intro-anim .anim1{
+    width: 500px;
+    height: 290px;
+    margin-right: 0rem;
+    margin-top: 10px;
+    
   }
 
   .socil-links a {
@@ -570,8 +574,13 @@ footer {
     cursor: pointer;
   }
 
+  .about{
+    margin-top: 1rem;
+  }
+
   .about-me .about {
     height: 45vh;
+    overflow-x: hidden;
   }
 
   .about-me .about h1 {
@@ -594,17 +603,17 @@ footer {
 
   .tag-item1,
   .tag-item2 {
-    transform: scale(1.3);
+    /* transform: scale(1.3); */
 
   }
 
   .tag-item2 {
-    margin-left: 20px;
+    /* margin-left: 20px; */
   }
 
   .tag-item1 p,
   .tag-item2 p {
-    font-size: 10px;
+    font-size: 15px;
 
   }
 
@@ -612,21 +621,28 @@ footer {
   .skill-board {
     margin-top: 13vh;
     height: 55vh;
+    overflow: hidden;
 
   }
 
   .skill-board .skill-head {
     margin-left: 30%;
-    margin-top: 3rem;
+    margin-top: 2rem;
+    
   }
 
   .skill-board .skill-container {
     display: grid;
+    margin-top: 1rem;
     grid-template-columns: repeat(3, 1fr);
     width: 100%;
+    height: 90vh;
     margin-left: -10px;
-    scale: 0.86;
+    /* scale: 0.8;
+    row-gap: 10px; */
     margin-top: -19px;
+    overflow: hidden;
+
 
 
   }
@@ -638,11 +654,6 @@ footer {
     align-items: center;
     flex-direction: column;
 
-
-
-
-
-
   }
 
   .skill-container .skill-box h2 {
@@ -650,9 +661,9 @@ footer {
   }
 
   .skill-box .img {
-    width: 75px;
-    height: 75px;
-    display: grid;
+    width: 60px;
+    height: 60px;
+    /* display: grid; */
 
   }
 
@@ -698,6 +709,17 @@ footer {
   to {
     opacity: 1;
   }
+}
+
+@keyframes nav {
+  from{
+    opacity: 0;
+    transform: translateY(-100px);
+  }to{
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
 }
 
 /* ====================

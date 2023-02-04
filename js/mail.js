@@ -36,15 +36,9 @@ const firebaseConfig = {
   
     saveMessages(name, email,subject, message);
   
-    //   enable alert
-    // document.querySelector(".alert").style.display = "block";
+    
     alert("Your MSG Is Recorded")
-    //   remove the alert
-    // setTimeout(() => {
-    //   document.querySelector(".alert").style.display = "none";
-    // }, 3000);
-  
-    //   reset the form
+    
     document.getElementById("contactForm").reset();
   }
   
