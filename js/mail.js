@@ -38,7 +38,7 @@ const firebaseConfig = {
   
     //   enable alert
     // document.querySelector(".alert").style.display = "block";
-    console.log("Sent")
+    alert("Your MSG Is Recorded")
     //   remove the alert
     // setTimeout(() => {
     //   document.querySelector(".alert").style.display = "none";
